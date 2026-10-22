@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生興趣調查表</title>
+    <style>
+        .watermark {
+            position: fixed;
+            right: 16px;
+            bottom: 12px;
+            color: rgba(0, 0, 0, 0.35);
+            font-size: 14px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>學生興趣調查表</h1>
+
+<form>
+    <!-- 姓名 -->
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="name">
+
+    <br><br>
+
+    <!-- 性別 -->
+    <span>性別：</span>
+    <input type="radio" id="gender-male" name="gender" value="男">
+    <label for="gender-male">男</label>
+    <input type="radio" id="gender-female" name="gender" value="女">
+    <label for="gender-female">女</label>
+
+    <br><br>
+
+    <!-- 年級下拉式選單 -->
+    <label for="grade">年級：</label>
+    <select id="grade" name="grade">
+        <option value="一年級">一年級</option>
+        <option value="二年級">二年級</option>
+        <option value="三年級">三年級</option>
+        <option value="四年級">四年級</option>
+    </select>
+
+    <br><br>
+
+    <!-- 興趣 -->
+    <span>興趣：</span>
+    <input type="checkbox" id="hobby-sports" name="hobby" value="運動">
+    <label for="hobby-sports">運動</label>
+    <input type="checkbox" id="hobby-music" name="hobby" value="音樂">
+    <label for="hobby-music">音樂</label>
+    <input type="checkbox" id="hobby-reading" name="hobby" value="閱讀">
+    <label for="hobby-reading">閱讀</label>
+    <input type="checkbox" id="hobby-travel" name="hobby" value="旅遊">
+    <label for="hobby-travel">旅遊</label>
+
+    <br><br>
+
+    <!-- 最喜歡的科目 -->
+    <label for="subject">最喜歡的科目：</label>
+    <select id="subject" name="subject">
+        <option value="國文">國文</option>
+        <option value="英文">英文</option>
+        <option value="數學">數學</option>
+        <option value="資訊">資訊</option>
+    </select>
+
+    <br><br>
+
+    <!-- 意見 -->
+    <label for="comment">其他意見：</label>
+    <br>
+    <textarea id="comment" name="comment" rows="5" cols="40" placeholder="請輸入你的意見"></textarea>
+
+    <br><br>
+
+    <input type="submit" value="送出">
+    <input type="reset" value="重設">
+</form>
+
+<div class="watermark">姓名：陳冠壬</div>
+
+</body>
+</html>

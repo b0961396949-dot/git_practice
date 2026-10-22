@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="日常選物：文具、居家用品與日常配件的購物車示範網站。">
+  <title>日常選物 Everyday Goods</title>
+  <link rel="stylesheet" href="shop.css">
+  <script src="products.js" defer></script>
+  <script src="shop.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="日常選物首頁"><span class="brand-icon" aria-hidden="true">日</span><span>日常選物<small>EVERYDAY GOODS</small></span></a>
+    <div class="header-note">為生活，選一點剛剛好的喜歡。</div>
+    <a class="cart-link" href="#cart">購物車 <span id="cart-count">0</span></a>
+  </header>
+  <aside class="left" aria-label="商品分類">
+    <p class="eyebrow">EXPLORE</p><h2>慢慢挑選</h2>
+    <nav id="categories" aria-label="選擇分類">
+      <button class="category active" data-category="全部商品" aria-pressed="true">全部商品 <span>06</span></button>
+      <button class="category" data-category="紙品文具" aria-pressed="false">紙品文具 <span>02</span></button>
+      <button class="category" data-category="居家生活" aria-pressed="false">居家生活 <span>02</span></button>
+      <button class="category" data-category="日常配件" aria-pressed="false">日常配件 <span>02</span></button>
+    </nav>
+    <div class="sidebar-note"><span aria-hidden="true">✳</span><p>小小的物件，<br>剛好的日常。</p><small>滿 NT$1,000 免運</small></div>
+    <a class="assignment" href="index.html">← 返回個人介紹</a>
+  </aside>
+  <main class="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow">THE EVERYDAY COLLECTION</p><h1 id="hero-title">讓喜歡的物件，<br>陪你過每一天。</h1><p>從一頁筆記、一杯熱茶，到出門的小包。<br>挑選實用又耐看的生活夥伴。</p><a href="#collection">探索日常選物 <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-art" aria-hidden="true"><span class="hero-circle"></span><img class="hero-book" src="notebook.svg" alt=""><img class="hero-mug" src="mug.svg" alt=""><span class="hero-label">GOOD THINGS,<br>EVERY DAY.</span></div>
+    </section>
+    <section id="collection" aria-labelledby="collection-title">
+      <div class="collection-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2 id="collection-title">全部商品 <small id="result-count">6 件選物</small></h2></div><label class="sort-label">排序 <select id="sort"><option value="featured">推薦順序</option><option value="price-asc">價格：低到高</option><option value="price-desc">價格：高到低</option></select></label></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋喜歡的日常物件…" aria-label="搜尋商品"></label>
+      <div id="products" class="products"></div>
+      <p id="no-results" class="no-results" hidden>找不到符合的商品，試試其他關鍵字。</p>
+    </section>
+  </main>
+  <aside class="right" id="cart" aria-labelledby="cart-title">
+    <div class="cart-panel"><p class="eyebrow">YOUR LITTLE FINDS</p><div class="cart-heading"><h2 id="cart-title">你的購物車</h2><span id="cart-types">0 款</span></div>
+      <div id="cart-items"></div>
+      <div id="cart-empty" class="cart-empty"><span aria-hidden="true">⌑</span><h3>裝一點喜歡進來</h3><p>挑選一件小物，<br>開始你的日常收藏。</p></div>
+      <div class="totals"><p><span>商品小計</span><strong id="subtotal">NT$0</strong></p><p><span>運費</span><span id="shipping">—</span></p><p id="shipping-hint" class="shipping-hint">滿 NT$1,000 免運費</p><p class="total"><span>合計</span><strong id="total">NT$0</strong></p></div>
+      <button id="checkout" class="checkout" disabled>前往結帳 <span aria-hidden="true">→</span></button>
+      <button id="clear-cart" class="clear-cart" hidden>清空購物車</button>
+      <p class="demo-note">課堂購物車示範 · 結帳不收取款項</p>
+    </div>
+  </aside>
+  <footer class="footer"><span>日常選物 <small>EVERYDAY GOODS</small></span><span>讓每一件小物，都有它的位置。</span><small>Chapter 4 · CSS Grid 練習</small></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="checkout-dialog" aria-labelledby="checkout-title"><form method="dialog"><button class="dialog-close" aria-label="關閉結帳視窗">×</button></form><p class="eyebrow">ONE MORE LITTLE STEP</p><h2 id="checkout-title">確認你的日常選物</h2><div id="order-summary"></div><p class="dialog-note">此為課堂示範，不會送出真實訂單或進行付款。</p><button id="confirm-order" class="checkout">確認模擬訂單</button></dialog>
+<dialog id="receipt-dialog" aria-labelledby="receipt-title"><form method="dialog"><button class="dialog-close" aria-label="關閉訂單結果">×</button></form><p class="eyebrow">THANK YOU</p><h2 id="receipt-title">日常的小確幸，已收藏。</h2><p>模擬訂單已完成，購物車已清空。</p><div id="receipt"></div><form method="dialog"><button class="checkout">繼續挑選</button></form></dialog>
+</body>
+</html>

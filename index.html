@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陳冠壬的個人介紹網站，記錄網頁前端設計的學習內容與課堂作品。">
+  <title>陳冠壬｜個人介紹網站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="回到首頁">冠壬<span>個人網站</span></a>
+    <nav aria-label="主要導覽">
+      <a href="#about">關於我</a>
+      <a href="#learning">學習內容</a>
+      <a href="#projects">課堂作品 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-main">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> FRONTEND LEARNING JOURNAL</p>
+        <p class="hello">你好，很高興認識你。</p>
+        <h1 id="page-title">我是<span>陳冠壬</span><span class="period">。</span></h1>
+        <p class="intro">在一行行程式碼裡，<br>記錄我的網頁學習日常。</p>
+        <a class="button" href="#projects">看看我的課堂作品 <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="identity" aria-label="基本資料">
+        <div class="identity-top"><span>STUDENT PROFILE</span><span>01</span></div>
+        <div class="monogram" aria-hidden="true">陳<span>CHEN</span></div>
+        <dl>
+          <div><dt>姓名</dt><dd>陳冠壬</dd></div>
+          <div><dt>班級</dt><dd>AI二1</dd></div>
+          <div><dt>學習主題</dt><dd>網頁前端設計</dd></div>
+        </dl>
+        <p class="identity-bottom">網頁前端設計 <span>HTML / CSS / JS</span></p>
+      </aside>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>01 — ABOUT</span><h2 id="about-title">關於我</h2></div>
+      <div class="about-text"><p>你好，我是陳冠壬，目前就讀 AI二1。這個網站整理我的基本資料，以及在網頁前端設計課程中完成的練習。</p><p>從 HTML 的網頁結構、CSS 的版面與樣式，到 JavaScript 的互動功能，將課堂內容逐步整理成可以實際操作的小作品。</p></div>
+    </section>
+
+    <section class="learning-section" id="learning" aria-labelledby="learning-title">
+      <div class="section-heading"><div class="section-label"><span>02 — LEARNING</span><h2 id="learning-title">正在學習的內容</h2></div><p>從結構、樣式，到互動。</p></div>
+      <div class="learning-grid">
+        <article><span class="skill-number">01</span><h3>HTML <span>網頁結構</span></h3><p>標題、段落、連結與表單，<br>建立清楚的內容層次。</p><code>&lt;section&gt; &lt;form&gt; &lt;nav&gt;</code></article>
+        <article><span class="skill-number">02</span><h3>CSS <span>版面樣式</span></h3><p>運用 Grid、盒模型與轉場，<br>讓畫面在不同裝置上呈現。</p><code>grid · padding · transition</code></article>
+        <article><span class="skill-number">03</span><h3>JavaScript <span>互動功能</span></h3><p>以購物車練習商品搜尋、<br>數量調整與金額計算。</p><code>events · filter · localStorage</code></article>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div class="section-label"><span>03 — SELECTED WORK</span><h2 id="projects-title">課堂作品</h2></div><p>把練習，變成可以打開的網頁。</p></div>
+      <a class="project" href="shop.html"><span class="project-number">01</span><div><h3>日常選物購物車</h3><p>商品分類與搜尋、數量調整、運費計算及模擬結帳。</p></div><span class="project-tech">HTML · CSS · JavaScript</span><span class="project-arrow" aria-hidden="true">↗</span></a>
+      <a class="project" href="form.html"><span class="project-number">02</span><div><h3>學生興趣表單</h3><p>以表單欄位、選項與標籤練習 HTML 的基本結構。</p></div><span class="project-tech">HTML · Form</span><span class="project-arrow" aria-hidden="true">↗</span></a>
+      <a class="project" href="transition.html"><span class="project-number">03</span><div><h3>CSS 轉場練習</h3><p>將滑鼠移入選單，觀察一秒的旋轉轉場效果。</p></div><span class="project-tech">CSS · Transition</span><span class="project-arrow" aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer><span>陳冠壬 <small>AI二1 · 學生作品集</small></span><p>網頁前端設計課堂作業 · 本網站由 AI 輔助製作</p><a href="#home">回到頂端 ↑</a></footer>
+</body>
+</html>
